@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    margin-top: 5px;
+    text-align: center;
+    font-family:Indie Flower ;
+    background-image: linear-gradient(180deg,#46abe4, #126391, white);
+}
+
+.boat {
+    position: absolute;
+    z-index: -1;
+    top: 70%;
+    left: 50%;
+    animation: sailing 30s 1s both linear infinite alternate;
+}
+  
+#hull {
+    
+    border: solid;
+    border-color: rgb(239, 188, 144) transparent;
+    border-width: 20px 50px 0px 30px;
+    margin-top: -180px;
+    margin-left: -180px;
+}
+  
+#mainsail {
+   
+    border: solid;
+    border-color: transparent white transparent transparent;
+    border-width: 50px 20px 0 15px;
+    margin-top: -232px;
+    margin-left: -187px;
+}
+  
+#jib {
+    
+    border: solid;
+    border-color: transparent transparent transparent white;
+    border-width: 45px 30px 0 30px;
+    margin-top: -227px;
+    margin-left: -150px;
+}
+  
+@keyframes sailing {
+    100%{transform: translateX(280px)}
+}
+
+h1 {
+    text-shadow: 2px 2px #126391;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+    font-family: Caesar Dressing ;
+}
+
+nav {
+    height: 100px;
+    display: block;   
+    background-color: #126391;
+    position: sticky;
+    top: 0;
+    border-style: outset;
+} 
+
+.img-2 {
+    height: 50px;
+    width: 100px;
+    padding-top: 20px;
+}
+   
+nav a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    text-shadow: 1px 1px #46abe4;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center; 
+    transition: 2s;
+    margin-bottom: 30px;    
+}
+
+nav a:hover {
+    background-color: #b5d9ed;
+    color: #126391;
+    transition: opacity 2s;   
+}
+
+aside .banner-1, .banner-2, .banner-3 {
+    color: white;
+    text-shadow: 1px 1px #126391;
+    text-align: center;
+    height: 100px;
+    width: 200px;
+    border: 2px solid white;
+    padding: 10px;;
+    
+    border-radius: 5px;
+    border-style: dotted;
+    margin: 40px;
+    display: inline-table
+}
+
+.banner-1:hover, .banner-2:hover, .banner-3:hover {
+    transform: scale(1.2);
+    background: #126391;
+    border-radius: 180px;    
+}
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 22px;
+    border-radius: 40px;
+    transition: 2s;
+} 
+  
+.column:hover {
+    width: 300px;
+    height: 300px;
+    transform:  perspective(100px) 
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.paragraph {
+    text-transform: capitalize;
+    margin: 20px;
+}
+
+.moon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 0 #126391;
+    animation: moon 20s infinite linear;
+}
+
+@keyframes moon {
+    0% {
+        box-shadow: 15px 15px 0 0 15px 15px 0 0;}
+    25% {
+        box-shadow: 15px 15px 0 0  rgb(233, 233, 151);
+        transform: translate(300px);
+    }
+    50% {
+        border-radius: 15px 15px 0 0  yellow;
+        transform: translate(600px)
+    }
+    100% {
+        box-shadow: 15px 15px 0 0  #126391;
+        transform: translate(1200px)
+    }
+}
+
+.bottom {
+    background-size: cover;
+    width: 100%    
+}
+
+footer {
+    color: white;
+    background-color: #126391;
+}
